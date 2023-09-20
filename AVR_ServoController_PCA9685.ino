@@ -112,8 +112,8 @@ void setup() {
     debug("\nInitialize eeprom\n");
     EEPROM.write(0, 0xA5);
     for(uint8_t i=0; i<nservos; i++) {            // .. then for each servo, set its positions
-      spos[0][i] = (MAXPOSN-MINPOSN)/2 + 25;       // first position half-way plus a bit    
-      spos[1][i] = (MAXPOSN-MINPOSN)/2 - 25;       // second position
+      spos[0][i] = (MAXPOSN-MINPOSN)/2 + 40;       // first position half-way plus a bit    
+      spos[1][i] = (MAXPOSN-MINPOSN)/2 - 40;       // second position
       spos[2][i] = 0;                             // active position: 0-1
     }
     EEPROM.put(1,spos);                           // and save spos to the EEPROM location 1
